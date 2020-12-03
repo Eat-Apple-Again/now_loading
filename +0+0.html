@@ -44,6 +44,7 @@
                         if (ans[2] != ans[3])
                             break;
             }
+            message = "";
             document.getElementById("input").value = "";
             document.getElementById("display").innerHTML = "";
         }
@@ -64,6 +65,7 @@
 
             if ((thousand < 1000) || (thousand > 10000)) {//check input 1
                 alert("---Illegal Input---");
+                document.getElementById("input").value = "";
                 return;
             }
 
@@ -72,6 +74,7 @@
                 for (var j = i + 1; j < 4; j++) {
                     if (compare(thousand[i], thousand[j])) {
                         alert("---Illegal Input---");
+                        document.getElementById("input").value = "";
                         check_input = true;
                         return;
                     }
@@ -114,7 +117,7 @@
 </head>
 
 <body>
-    <input type="number" id="input" autofocus><br>
+    <input type="number" id="input" autofocus>
 
     <button onclick="start_playing()">確認</button>
     <button onclick="re_input()">清除</button>
@@ -131,12 +134,10 @@
     <button value="0" width='150px' onclick="vkeyboard(10)">0</button><br>
     <hr>
 
-    <div id="display">
+    <div id="display"></div><br><br>
 
-    </div><br><br>
-
-    <div id="picture">
-    </div>
+    <div id="picture"></div>
+    
 </body>
 
 </html>
