@@ -3,7 +3,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" />
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" />
     <title>AABB_guess</title>
     <script>
         var comp, num_A = 0, num_B = 0, thousand, count = 0, play_again;
@@ -11,6 +12,10 @@
         var input = new Array(-1, -1, -1, -1);
         var check_input = new Boolean;
         var message = "";
+
+        function pictures() {
+            document.getElementById("picture").value;
+        }
 
         function re_input() {
             document.getElementById("input").value = "";
@@ -109,7 +114,7 @@
 </head>
 
 <body>
-    <input type="number" id="input" autofocus>
+    <input type="number" id="input" autofocus><br>
 
     <button onclick="start_playing()">確認</button>
     <button onclick="re_input()">清除</button>
@@ -123,9 +128,15 @@
     <button value="7" width='50px' onclick="vkeyboard(7)">7</button>
     <button value="8" width='50px' onclick="vkeyboard(8)">8</button>
     <button value="9" width='50px' onclick="vkeyboard(9)">9</button><br>
-    <button value="0" width='150px' onclick="vkeyboard(10)">0</button><br><hr>
+    <button value="0" width='150px' onclick="vkeyboard(10)">0</button><br>
+    <hr>
 
-    <div id="display"></div>
+    <div id="display">
+
+    </div><br><br>
+
+    <div id="picture">
+    </div>
 </body>
 
 </html>
